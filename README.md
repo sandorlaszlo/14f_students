@@ -36,3 +36,7 @@ API metódusokkal együtt
 
 All in One:
 php artisan make:model Teacher -mfc --api
+
+
+## ThunderClient export
+thunder-collection_14f_students.json
