@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/student", [StudentController::class,"index"]);
-Route::get("/student/{id}", [StudentController::class,"show"]);
-Route::post("/student", [StudentController::class,"store"]);
-Route::delete("/student/{id}", [StudentController::class,"destroy"]);
-Route::patch("/student/{id}", [StudentController::class,"update"]);
-Route::put("/student/{id}", [StudentController::class,"update"]);
+// Route::get("/student", [StudentController::class,"index"]);
+// Route::get("/student/{id}", [StudentController::class,"show"]);
+// Route::post("/student", [StudentController::class,"store"]);
+// Route::delete("/student/{id}", [StudentController::class,"destroy"]);
+// Route::patch("/student/{id}", [StudentController::class,"update"]);
+// Route::put("/student/{id}", [StudentController::class,"update"]);
+Route::apiResource("student", StudentController::class);
+Route::get("student/rank/{limit}", [StudentController::class,"rankOverLimit"]);

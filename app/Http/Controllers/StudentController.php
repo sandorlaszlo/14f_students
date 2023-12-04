@@ -67,4 +67,12 @@ class StudentController extends Controller
         $student->delete();
         return response('', 204);
     }
+
+    public function rankOverLimit($limit)
+    {
+        $students = Student::where('rank', '>', $limit)->get();
+        if ($students->count() == 0)
+            return response()->json(['message'=> 'No matching student found.'], 404);
+        return response()->json($students);
+    }
 }
