@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Group;
 use App\Models\Student;
 use Illuminate\Database\Seeder;
 
@@ -21,6 +22,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        Group::factory(5)->create();
         Student::factory(20)->create();
     }
 }

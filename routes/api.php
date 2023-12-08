@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GroupController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,5 @@ use Illuminate\Support\Facades\Route;
 // Route::put("/student/{id}", [StudentController::class,"update"]);
 Route::apiResource("student", StudentController::class);
 Route::get("student/rank/{limit}", [StudentController::class,"rankOverLimit"]);
+
+Route::apiResource("group", GroupController::class);

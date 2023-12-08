@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Group;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,10 +17,13 @@ class StudentFactory extends Factory
      */
     public function definition(): array
     {
+        $groups = Group::all();
+
         return [
             "name" => $this->faker->name,
             "email"=> $this->faker->safeEmail,
             "rank"=> $this->faker->numberBetween(1,100),
+            "group_id"=> $groups->random(),
         ];
     }
 }

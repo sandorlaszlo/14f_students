@@ -40,5 +40,8 @@ php artisan make:model Teacher -mfc --api
 Route útvonalak listázása
 ```php artisan route:list```
 
+Saját validálási request osztály létrhozása
+```php artisan make:request CreateStudentRequest```
+
 ## ThunderClient export
 thunder-collection_14f_students.json
